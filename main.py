@@ -27,7 +27,7 @@ RED = '\033[91m'
 GREEN = '\033[92m'
 headers = Headers(headers=True)
 proxies = set()
-with open("proxy_analizer/proxy.txt") as file:
+with open("proxy.txt") as file:
     for line in file:
         proxies.add(line.strip())
 
