@@ -9,7 +9,7 @@ from time import sleep
 def try_proxy(proxy):
     all_c.append('')
     try:
-        proxies = {'http': f'https://{proxy.replace("http://", "")}', 'https': f'https://{proxy.replace("http://", "")}'}
+        proxies = {'http': f'http://{proxy.replace("http://", "")}', 'https': f'http://{proxy.replace("http://", "")}'}
         get("https://api.ipify.org", proxies=proxies, headers=headers.generate()).text
         print(f'{BOLD + GREEN + proxy.replace("http://", "")} - VALID')
         good_c.add(proxy)
